@@ -69,7 +69,7 @@ public class SkriptCommandTabCompleter implements TabCompleter {
 						if (file.isHidden())
 							return;
 
-						// When following a soft link on linux, additional processing may be required to detect whether the content pointed to by the symbolic link exists
+						// When following soft link folder (linux), additional processing may be required to detect whether the content pointed to by the symbolic link exists
 						if (Files.isSymbolicLink(file.toPath())) {
 							try {
 								Path resolvedPath = file.toPath().toRealPath();
